@@ -11,6 +11,25 @@ export const CardGrid: Block = {
     blockFields({
       name: 'cardGridFields',
       fields: [
+        {
+          name: 'alignment',
+          type: 'select',
+          defaultValue: 'horizontal',
+          options: [
+            {
+              label: 'Horizontal',
+              value: 'horizontal',
+            },
+            {
+              label: 'Vertical',
+              value: 'vertical',
+            },
+          ],
+          admin: {
+            description: 'Choose how to align the content for this block.',
+            width: '50%',
+          },
+        },
         richText(),
         linkGroup({
           appearances: false,

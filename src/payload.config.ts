@@ -12,6 +12,7 @@ import { LexicalPlugin } from 'payload-plugin-lexical'
 
 import { Announcements } from './collections/Announcements'
 import { CaseStudies } from './collections/CaseStudies'
+import Categories from './collections/Categories'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
@@ -47,7 +48,17 @@ export default buildConfig({
     trustProxy: true,
     max: 4000,
   },
-  collections: [Announcements, CaseStudies, Media, Pages, Posts, Products, ReusableContent, Users],
+  collections: [
+    Announcements,
+    CaseStudies,
+    Media,
+    Pages,
+    Posts,
+    Products,
+    ReusableContent,
+    Users,
+    Categories,
+  ],
   globals: [Footer, MainMenu, TopBar, Settings],
   upload: {
     limits: {

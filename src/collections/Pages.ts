@@ -25,6 +25,7 @@ import { ReusableContent } from '../blocks/ReusableContent'
 import { Slider } from '../blocks/Slider'
 import { Steps } from '../blocks/Steps'
 import { StickyHighlights } from '../blocks/StickyHighlights'
+import { TilesGrid } from '../blocks/TilesGrid'
 import { fullTitle } from '../fields/fullTitle'
 import { hero } from '../fields/hero'
 import { slugField } from '../fields/slug'
@@ -104,6 +105,7 @@ export const Pages: CollectionConfig = {
                 LocationsGrid,
                 ProductCardGrid,
                 LexicalRichText,
+                TilesGrid,
               ],
             },
           ],

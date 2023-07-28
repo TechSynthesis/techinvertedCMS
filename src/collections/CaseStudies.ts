@@ -60,6 +60,45 @@ export const CaseStudies: CollectionConfig = {
       type: 'text',
       required: true,
     },
+    {
+      name: 'workLogo',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
+    {
+      name: 'workServices',
+      type: 'relationship',
+      relationTo: 'categories',
+      hasMany: true,
+    },
+    {
+      name: 'workDetail',
+      type: 'array',
+      fields: [
+        {
+          name: 'label',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+        },
+      ],
+    },
+
+    {
+      name: 'workBackground',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'featuredImage',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
     richText({
       name: 'introContent',
       admin: {
@@ -67,12 +106,6 @@ export const CaseStudies: CollectionConfig = {
         leaves: ['underline'],
       },
     }),
-    {
-      name: 'featuredImage',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-    },
     {
       name: 'layout',
       type: 'blocks',

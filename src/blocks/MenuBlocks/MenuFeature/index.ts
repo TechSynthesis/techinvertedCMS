@@ -1,6 +1,6 @@
 import type { Block } from 'payload/types'
 
-import link from '../../fields/link'
+import link from '../../../fields/link'
 
 export const MenuFeature: Block = {
   slug: 'menuFeature',

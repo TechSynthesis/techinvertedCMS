@@ -2,6 +2,7 @@ import type { Block } from 'payload/types'
 
 import { blockFields } from '../../fields/blockFields'
 import richText from '../../fields/richText'
+import AnimationLeaf from '../../fields/richText/AnimationLeaf'
 
 export const Content: Block = {
   slug: 'content',
@@ -50,6 +51,9 @@ export const Content: Block = {
         },
         richText({
           name: 'columnOne',
+          admin: {
+            leaves: ['bold', 'italic', 'underline', AnimationLeaf],
+          },
         }),
         richText({
           name: 'columnTwo',

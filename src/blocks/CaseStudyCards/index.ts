@@ -13,6 +13,7 @@ export const CaseStudyCards: Block = {
     blockFields({
       name: 'caseStudyCardFields',
       fields: [
+        richText(),
         {
           name: 'cards',
           type: 'array',
@@ -23,6 +24,16 @@ export const CaseStudyCards: Block = {
               type: 'relationship',
               relationTo: 'case-studies',
               required: true,
+              hasMany: false,
+            },
+            {
+              name: 'testimonial',
+              type: 'array',
+              maxRows: 1,
+              fields: [
+                { name: 'blockquote', type: 'textarea' },
+                { name: 'fullTestimonial', type: 'textarea' },
+              ],
             },
           ],
         },
